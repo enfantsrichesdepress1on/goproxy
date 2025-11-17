@@ -1,0 +1,18 @@
+{
+  "listen_addr": ":8080",
+  "log_level": "info",
+  "request_timeout_ms": 5000,
+  "load_balancing": {
+    "strategy": "round_robin"
+  },
+  "backends": [
+    { "url": "http://localhost:9001" },
+    { "url": "http://localhost:9002" },
+    { "url": "http://localhost:9003" }
+  ],
+  "health_check": {
+    "path": "/health",
+    "interval_ms": 2000,
+    "timeout_ms": 1000
+  }
+}
