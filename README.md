@@ -43,19 +43,26 @@ goproxy/
 ├── cmd/
 │ └── goproxy/
 │ └── main.go
+│
 ├── internal/
 │ ├── api/
 │ │ └── server.go
+│ │
 │ ├── backend/
 │ │ └── backend.go
+│ │
 │ ├── config/
 │ │ └── config.go
+│ │
 │ ├── health/
 │ │ └── checker.go
+│ │
 │ └── logger/
 │ └── logger.go
-├── example_backend/ ← пример backend-сервера для тестов
+│
+├── example_backend/ # бэкенд для тестирования прокси
 │ └── backend.go
-├── config.json.example
+│
+├── config.json.example 
 ├── go.mod
 └── README.md
