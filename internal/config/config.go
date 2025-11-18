@@ -7,7 +7,7 @@ import (
 )
 
 type LoadBalancingConfig struct {
-	Strategy string `json:"strategy"` // round_robin | random | least_connections
+	Strategy string `json:"strategy"` 
 }
 
 type BackendConfig struct {
@@ -15,15 +15,15 @@ type BackendConfig struct {
 }
 
 type HealthCheckConfig struct {
-	Path       string `json:"path"`        // /health
-	IntervalMs int    `json:"interval_ms"` // 2000
-	TimeoutMs  int    `json:"timeout_ms"`  // 1000
+	Path       string `json:"path"`        
+	IntervalMs int    `json:"interval_ms"` 
+	TimeoutMs  int    `json:"timeout_ms"`  
 }
 
 type Config struct {
-	ListenAddr       string              `json:"listen_addr"`        // ":8080"
-	LogLevel         string              `json:"log_level"`          // "debug"|"info"|"error"
-	RequestTimeoutMs int                 `json:"request_timeout_ms"` // timeout для запросов к backend
+	ListenAddr       string              `json:"listen_addr"`        
+	LogLevel         string              `json:"log_level"`          
+	RequestTimeoutMs int                 `json:"request_timeout_ms"`
 	LoadBalancing    LoadBalancingConfig `json:"load_balancing"`
 	Backends         []BackendConfig     `json:"backends"`
 	HealthCheck      HealthCheckConfig   `json:"health_check"`
